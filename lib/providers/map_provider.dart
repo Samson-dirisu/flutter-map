@@ -11,10 +11,8 @@ class MapProvider extends ChangeNotifier {
   LocationModel? _locations;
   List<Marker>? _markers;
   final LocationService _locationService = LocationService();
-  final CameraPosition _kInitialPosition = const CameraPosition(
-    target: LatLng(25.1212, 55.1535),
-    zoom: 11,
-  );
+  final CameraPosition _kInitialPosition =
+      const CameraPosition(target: LatLng(25.1212, 55.1535), zoom: 11);
 
   LocationModel? get locations => _locations;
   List<Marker>? get markers => _markers;
@@ -25,6 +23,17 @@ class MapProvider extends ChangeNotifier {
     getMarkers();
     notifyListeners();
   }
+
+
+
+
+
+
+
+
+
+
+  
 
   // Funtion to convert location model to Markers
   void getMarkers() {

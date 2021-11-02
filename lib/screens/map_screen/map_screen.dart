@@ -24,9 +24,8 @@ class MapScreen extends StatelessWidget {
             myLocationButtonEnabled: true,
             myLocationEnabled: true,
             onTap: (latLng) {},
-            onMapCreated: (GoogleMapController controller) {
-              _controller.complete(controller);
-            },
+            onMapCreated: (GoogleMapController controller) =>
+                _controller.complete(controller),
             markers: mapProvider.markers != null
                 ? mapProvider.markers!.map((e) => e).toSet()
                 : {},
